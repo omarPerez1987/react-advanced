@@ -34,7 +34,7 @@ const mapUser = (user: UserApiResponse) => ({
 
 async function fetchUsers({ pageParam = 1 }: { pageParam: number }) {
   const response = await fetch(
-    `https://randomuser.me/api/?page=${pageParam}&results=10&seed=users`
+    `https://randomuser.me/api/?page=${pageParam}&results=10`
   );
   if (!response.ok) {
     throw new Error(`Error ${response.status}`);
